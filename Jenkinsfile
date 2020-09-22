@@ -15,7 +15,7 @@ stage('ansible Deploy'){
 steps{
        sh "echo ${params.myhost}"
 	   sh "echo ${params.TAG}"
-       sh "ansible-playbook -i '${params.myhost}' spring1.yml --extra-vars 'my_arg=${params.TAG}'"
+       sh "ansible-playbook -i '${params.myhost}' Deployment.yml --extra-vars 'my_arg=${params.TAG}'"
         }
        }
 }
